@@ -1,0 +1,232 @@
+Q1. method overloading 
+   methods with same name but they differ in number of parameter
+   1.data type of parameter
+   2.order of parameter 
+   3.number of parameter
+
+ex  static void suhas(int age,String name)
+      {
+       System.out.println("invoking suhas methid");
+       
+
+        }
+
+
+   static void suhas(String name,int age)
+   
+     {
+       System.out.println("invoking suhas methid with changed order of parameter ");
+       
+
+   
+     }
+
+
+Q2.types of variables
+  1.instance variables
+  2.local variables
+  3.static varibles
+  4.parameter variables
+ 
+    1.instance variable:the variables which are declared inside the class but outside the blocks in the class
+       they create multiple copies of values
+     
+
+ex    class Suhas{
+            int age;
+            String name;
+      Suhas()
+       {
+       System.out.println("Suhas is a good person");
+
+       }
+
+
+    2.local varibles:the variables which are declared within blocks(methids  constructors )
+ 
+
+ex    class Suhas{
+            
+     static void  Suhas()
+       {
+       System.out.println("Suhas is a good person");
+       int age=25;
+       String name= "Suhas";
+
+       }
+
+   3.static variables:these are the variables which are declared inside with the keyword static
+    they create only one copy of value
+   they can be accessed to all the instances
+
+
+ex      class Suhas{
+
+         static String worksIn="x-workz";//static variable
+            
+     static void  Suhas()
+       {
+       System.out.println("Suhas is a good person");
+       int age=25;
+       String name= "Suhas";
+
+       }
+
+   4.parameter :variables which are passed as arguements to a method are called parameter
+
+      class Suhas{
+            
+     static void  Suhas(int age,double height)
+       {
+       System.out.println("Suhas is a good person");
+       
+       }
+
+
+Q3.      stack                                                                         heap
+
+1.it is having stackframes                                    1.it is having
+                                                                1.metaspace 2.constant pool 3.instance memory
+
+
+
+2.all the methids are loaded int stack                       2.all the classes are loaded into the metaspace with the help of class loader
+
+3.it creates stack frame when execution starts               3.when object is created it copis all the instance into the instance pool and also create the 
+ also records the line which is executing and removes          memory and stores the initialised value into the constant pool 
+ the executed line
+
+4.LIFO when method call has happens last called method      4.for non primitive datatype in constant pool the default value is null
+  will execute first                                          for primitive datatype in constant pool the default value is 0, 0.0 whitespace etc
+
+
+
+
+Q4   class Suhas{
+            int age;
+            String name;
+      Suhas(int age,)
+       {
+        this.int=int;
+       System.out.println("invoking int parameter const in Suhas");
+
+       }
+  Suhas(int age,String name)
+       {
+        this(int age);
+        this.name=name;
+       System.out.println("invoking int,String parameter const in Suhas");
+
+       }
+}
+
+
+     class SuhasRunner{
+
+            public satic void main(String[] args)
+               {
+
+               System.out.println("invoking main SuhasRunner");
+                  
+                Suhas suhas=new Suhas(26,"Suhas");
+                System.out.println(suhas.age);
+                System.out.println(suhas.name) ;
+
+                 }
+
+
+          }
+
+
+Q5.  class Suhas{
+            int age;
+            String name;
+      static void Suhas(int age)
+       {
+        this.int=int;
+       System.out.println("invoking int parameter const in Suhas");
+
+       }
+  static void Suhas(int age,String name)
+       {
+        this(int age);
+        this.name=name;
+       System.out.println("invoking int,String parameter const in Suhas");
+
+       }
+}
+
+
+     class SuhasRunner{
+
+            public satic void main(String[] args)
+               {
+
+               System.out.println("invoking main SuhasRunner");
+                  
+               int Suhas.age=25;
+               String Suhas.name="Suhas";
+            System.out.println(Suhas.age);
+            System.out.println(Suhas.name);
+
+                 }
+
+
+          }
+
+
+Q6.     class Suhas{
+            int age;
+            String name;
+           static string company;
+      static void Suhas(int age)
+       {
+        this.int=int;
+       System.out.println("invoking int parameter const in Suhas");
+
+       }
+    
+   static 
+    {
+     String company="x-workz";
+    }
+  
+
+Q7   class Suhas{
+            int age;
+            String name;
+      static void Suhas(int age)
+       {
+        this.int=int;
+       System.out.println("invoking int parameter const in Suhas");
+
+       }
+  static void Suhas(int age,String name)
+       {
+        this(int age);
+        this.name=name;
+       System.out.println("invoking int,String parameter const in Suhas");
+
+       }
+}
+      
+         class SuhasRunner{
+
+            public satic void main(String[] args)
+               {
+
+               System.out.println("invoking main SuhasRunner");
+                  
+               int Suhas.age=25;
+               String Suhas.name="Suhas";
+            System.out.println(Suhas.age);
+            System.out.println(Suhas.name);
+
+                 }
+
+
+          }
+
+
+
+
